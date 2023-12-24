@@ -48,11 +48,11 @@ function createTable() {
         </tr>
     </table>
 
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbzURTyx_COHEJWbiOmzgILYHCj8eY72CGW1IBjm8Ma_jtMCZmKJOBmA2txjPfdv1hxk_g/exec">
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbyuop7CV1OKZhyZ-m1nqhgLdCMDOwluWWRIsVWVCMKKqxSE4YdOq8pYmuqC0efHHzkwPw/exec">
         <input type="hidden" name="Match Number" value="`+ parseText()[0]+ `">
-        <input type="hidden" name="Number of Cones Scored" value="`+ parseText()[1]+ `">
-        <input type="hidden" name="Number of Cubes Scored" value="`+ parseText()[2]+ `">
-        <button type="submit" onclick="location.href = '/index';">Send to Spreadsheet</button>
+        <input type="hidden" name="Number of Cones" value="`+ parseText()[1]+ `">
+        <input type="hidden" name="Number of Cubes" value="`+ parseText()[2]+ `">
+        <button type="submit">Send to Spreadsheet</button>
     </form>
   `;
 }
