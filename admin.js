@@ -63,10 +63,10 @@ function createTable() {
         <input type="hidden" name="Match Number" value="`+ parseText()[0]+ `">
         <input type="hidden" name="Teleop stat 1" value="`+ parseText()[1]+ `">
         <input type="hidden" name="Teleop stat 2" value="`+ parseText()[2]+ `">
-        <input type="hidden" name="Teleop stat 3" value="`+ parseText()[2]+ `">
-        <input type="hidden" name="Auto stat 1" value="`+ parseText()[2]+ `">
-        <input type="hidden" name="Auto stat 2" value="`+ parseText()[2]+ `">
-        <input type="hidden" name="Auto stat 3" value="`+ parseText()[2]+ `">
+        <input type="hidden" name="Teleop stat 3" value="`+ parseText()[3]+ `">
+        <input type="hidden" name="Auto stat 1" value="`+ parseText()[4]+ `">
+        <input type="hidden" name="Auto stat 2" value="`+ parseText()[5]+ `">
+        <input type="hidden" name="Auto stat 3" value="`+ parseText()[6]+ `">
         <button type="submit">Send to Spreadsheet</button>
     </form>
   ;`
