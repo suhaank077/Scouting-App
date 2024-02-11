@@ -59,6 +59,7 @@ body {
 .titles {
 	font-family: Arial;
 	font-size: 30px;
+	margin:auto;
 	font-weight: bold;
 	color:  #670c0f;
   }
@@ -66,6 +67,7 @@ body {
 .main-titles{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 60px;
+	margin: auto;
 	font-weight: bold;
 	color:  #670c0f;
 }
