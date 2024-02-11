@@ -18,6 +18,7 @@ body {
 	vertical-align: top;
 	text-align: center;
 	border: none;
+	margin:auto;
 }
 .input-addition-button {
 	width: 40px;
@@ -28,11 +29,13 @@ body {
 	vertical-align: top;
 	text-align: center;
 	border: none;
+	margin:auto;
+
 }
 .input-submit-button {
     width: auto; 
     height: auto; 
-    min-width: 250px;
+    min-width: 250px; /* Set a maximum width if needed */
     min-height: 100px;
     background: url('submitbutton.png');
     background-size: 100% 100%;
