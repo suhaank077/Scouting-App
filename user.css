@@ -53,7 +53,8 @@ body {
 	width: 100px;
 	height: 100px;
 	margin: auto;
-    display: block;
+	padding-bottom: 10vh;
+	display:block;
 	background-size: 100% 100%;
 	border: none;
 	left: 50%;
