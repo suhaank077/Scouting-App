@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
+    margin: 5vh;
   }
 .input-subtraction-button {
 	width: auto;
@@ -72,7 +72,7 @@ body {
 .main-titles{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 6vh;
-	margin: auto;
+	margin:.5vh;
 	font-weight: bold;
 	color:  #670c0f;
 }
