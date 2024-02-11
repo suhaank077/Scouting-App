@@ -11,9 +11,6 @@
         <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     </head>
     <body>
-  
-        
-        <br/>
         <h1 class="main-titles" >Falcon Scout</h1>
         <div class="match">
             <h3 class = "titles">Match Number</h3>
@@ -22,43 +19,34 @@
             <button class="input-addition-button" id="match" onclick="addition(this)"> </button>
         </div>
 
-        
-
-        <br/>
-        <div class="cones">
+        <div class="teleop1">
             <h3 class = "titles">Teleop Stat 1</h3>
             <button class="input-subtraction-button" id="teleop1" onclick="subtraction(this)"> </button>
             <input class = "titles" id="teleop1input" type="text" value="1"/>
             <button class="input-addition-button" id="teleop1" onclick="addition(this)"> </button>
         </div>
 
-        <br/>
 
-        <div class="cubes">
+        <div class="teleop2">
             <h3 class = "titles">Teleop Stat 2</h3>
             <button class="input-subtraction-button" id="teleop2" onclick="subtraction(this)"> </button>
             <input class = "titles" id="teleop2input" type="text" value="1"/>
             <button class="input-addition-button" id="teleop2" onclick="addition(this)"> </button>
         </div>
 
-        <br/>
-        <div class="cubes">
+        <div class="teleop3">
             <h3 class = "titles">Teleop Stat 3</h3>
             <button class="input-subtraction-button" id="teleop3" onclick="subtraction(this)"> </button>
             <input class = "titles" id="teleop3input" type="text" value="1"/>
             <button class="input-addition-button" id="teleop3" onclick="addition(this)"> </button>
         </div>
-        <br/>
+        
 
         <!-- Generate QR Code -->
 
-        <br/>
-        <br/>
         <button  class="input-submit-button" onclick="generateQRCode()"> </button>
-        <br/>
         <div class="qrcode" id="qrcode"></div>
 
-        <br/>
         <h1></h1>
         
     </body>
