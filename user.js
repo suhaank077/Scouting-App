@@ -1,5 +1,5 @@
 // Array with stuff
-const questions = ["match", "cones", "cubes"]
+const questions = ["match", "teleop1", "teleop2", "teleop3"]
 
 // Annoying button logic
 function addition(element) {
@@ -24,6 +24,7 @@ function getQRCodeString() {
     for (i = 0; i < questions.length; i++) {
         qrCodeString += getInputValue(questions[i]) + "|";
     }
+    return qrCodeString;
 }
 
 function generateQRCode() {
