@@ -41,20 +41,32 @@ function createTable() {
     <table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%;">
         <tr>
             <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Match Number</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Number of Cubes</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Number of Cones</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Teleop stat 1</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Teleop stat 2</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Teleop stat 3</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto stat 1</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto stat 2</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto stat 3</th>
         </tr>
         <tr>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[0]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[1]+ `</td>
             <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[2]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[3]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[4]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[5]+ `</td>
+            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[6]+ `</td>
         </tr>
     </table>
 
     <form method="POST" action="https://script.google.com/macros/s/AKfycbyuop7CV1OKZhyZ-m1nqhgLdCMDOwluWWRIsVWVCMKKqxSE4YdOq8pYmuqC0efHHzkwPw/exec">
         <input type="hidden" name="Match Number" value="`+ parseText()[0]+ `">
-        <input type="hidden" name="Number of Cones" value="`+ parseText()[1]+ `">
-        <input type="hidden" name="Number of Cubes" value="`+ parseText()[2]+ `">
+        <input type="hidden" name="Teleop stat 1" value="`+ parseText()[1]+ `">
+        <input type="hidden" name="Teleop stat 2" value="`+ parseText()[2]+ `">
+        <input type="hidden" name="Teleop stat 3" value="`+ parseText()[2]+ `">
+        <input type="hidden" name="Auto stat 1" value="`+ parseText()[2]+ `">
+        <input type="hidden" name="Auto stat 2" value="`+ parseText()[2]+ `">
+        <input type="hidden" name="Auto stat 3" value="`+ parseText()[2]+ `">
         <button type="submit">Send to Spreadsheet</button>
     </form>
   ;`
