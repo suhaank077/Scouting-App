@@ -10,23 +10,27 @@ body {
     margin: 0;
   }
 .input-subtraction-button {
-	width: 40px;
-	height: 40px;
+	width: auto;
+	height: auto;
+	min-width: 3vh;
+	min-height: 3vh;
 	background: url('subtraction (1).png');
 	background-size: 100% 100%;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: center;
 	text-align: center;
 	border: none;
 	margin:auto;
 }
 .input-addition-button {
-	width: 40px;
-	height: 40px;
+	width: auto;
+	height: auto;
+	min-width: 3vh;
+	min-height: 3vh;
 	background: url('addition.png');
 	background-size: 100% 100%;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: center;
 	text-align: center;
 	border: none;
 	margin:auto;
@@ -58,15 +62,15 @@ body {
 
 .titles {
 	font-family: Arial;
-	font-size: 30px;
-	margin:auto;
+	font-size: 3vh;
+	margin:.5vh;
 	font-weight: bold;
 	color:  #670c0f;
   }
 
 .main-titles{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 60px;
+	font-size: 6vh;
 	margin: auto;
 	font-weight: bold;
 	color:  #670c0f;

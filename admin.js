@@ -57,5 +57,5 @@ function createTable() {
         <input type="hidden" name="Number of Cubes" value="`+ parseText()[2]+ `">
         <button type="submit">Send to Spreadsheet</button>
     </form>
-  `;
+  ;`
 }
