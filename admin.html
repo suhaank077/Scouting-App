@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Admin | Falcon Scout</title>
-        <style type="stylesheet" src="admin.css"></style>
-    </head>
-    <body>
-        <h1>Admin</h1>
-        <div class="container"> 
-            <h1>Scan QR Codes</h1> 
-            <div class="section"> 
-                <div id="my-qr-reader"> 
-                </div> 
-            </div> 
-        </div> 
-        <script
-            src="https://unpkg.com/html5-qrcode"> 
-        </script> 
-        <script src="admin.js"></script>
 
-        <div id="myTable">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin | Falcon Scout</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-titles" style = "color: #670c0f;">Admin</h1>
+        <h1 class="titles" style="color: black;">Scan QR Codes</h1>
+        <div class="section">
+            <div id="my-qr-reader">
+            </div>
         </div>
-    </body>
+    </div>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="admin.js"></script>
+
+    <div id="myTable">
+    </div>
+</body>
+
 </html>

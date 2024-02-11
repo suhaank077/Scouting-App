@@ -1,0 +1,18 @@
+body {
+	/* Set your initial background color */
+	background-color: #edf2f4;
+  } 
+
+.titles {
+	font-family: Arial;
+	font-size: 30px;
+	font-weight: bold;
+	color:  #5fa8d3;
+  }
+
+.main-titles{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	color:  #670c0f;
+}

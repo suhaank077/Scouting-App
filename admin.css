@@ -6,7 +6,7 @@ body {
     height: 100vh; 
     box-sizing: border-box; 
     text-align: center; 
-    background: rgb(128 0 0 / 66%); 
+    background: #edf2f4; 
 } 
 .container { 
     width: 100%; 
@@ -83,3 +83,25 @@ td, th {
 th:nth-child(even) {
     background-color: #dddddd;
 }
+
+
+.titles {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color:  #670c0f;
+    text-align: center;
+    vertical-align: text-bottom;
+    
+  }
+
+.main-titles{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	color:  #670c0f;
+    text-align: center;
+    vertical-align: text-top;
+    margin-bottom: 10px
+}
+		
