@@ -30,14 +30,17 @@ body {
 	border: none;
 }
 .input-submit-button {
-	width: 250px;
-	height: 100px;
-	background: url('submitbutton.png');
-	background-size: 100% 100%;
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	border: none;
+    width: auto; 
+    height: auto; 
+    min-width: 250px;
+    min-height: 100px;
+    background: url('submitbutton.png');
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border: none;
+    margin: 30px;
 }
 .qrcode {
 	width: 100px;
