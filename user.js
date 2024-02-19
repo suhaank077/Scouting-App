@@ -34,6 +34,7 @@ function generateQRCode() {
         qrCodeString += getInputValue(questions[i]) + "|";
     }
     // alert(qrCodeString);
+    qrCodeString += coopertitionString + "|";
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);
 }
