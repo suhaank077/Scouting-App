@@ -6,8 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 5vh;
+	margin: 5px;
   }
 .input-subtraction-button {
 	width: auto;
@@ -59,6 +58,7 @@ body {
 	border: none;
 	left: 50%;
     transform: translateX(-75%);
+	margin-bottom: 100px;
 }
 
 .titles {
@@ -72,8 +72,22 @@ body {
 .main-titles{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 6vh;
-	margin:.5vh;
+	margin-top:20px;
 	font-weight: bold;
 	color:  #670c0f;
 }
 			
+.general-button{
+    height: 40px;
+    width : 75px;
+    text-align: center;
+	font-size: 18px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: inine-block;
+	vertical-align: middle;
+}
+.highlighted {
+    background-color: rgb(135, 135, 135); 
+    color: black; /* Change the text color as needed */
+}

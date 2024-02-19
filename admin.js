@@ -37,6 +37,7 @@ function createTable() {
     // Redo with for loops
     // Create .env file to store API link
     // sketchy af rn
+
     document.getElementById("myTable").innerHTML = `
     <table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%;">
         <tr>

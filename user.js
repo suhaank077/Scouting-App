@@ -1,6 +1,7 @@
 // Array with stuff
-const questions = ["match", "teleop1", "teleop2", "teleop3"]
-
+const questions = ["match", "team", "speaker", "amp", "speed"]
+var coopertitionString = "";
+var highlightedButtons = {};
 // Annoying button logic
 function addition(element) {
     // alert(element.id);
@@ -36,3 +37,20 @@ function generateQRCode() {
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), qrCodeString);
 }
+
+function coopertition(element){coopertitionString = element.includes("yes") === true ? "Yes": "No";}
+
+
+function unhighlightButtons(){
+    var buttons = document.querySelectorAll('.general-button, .num-button');
+    buttons.forEach(function(button) {
+        button.classList.remove('highlighted');
+    });
+}
+
+function highlightButton(sectionId, button) {
+    var currentHighlightedButton = highlightedButtons[sectionId];
+    if (currentHighlightedButton) {currentHighlightedButton.classList.remove('highlighted');}
+    button.classList.add('highlighted');
+    highlightedButtons[sectionId] = button;
+}   
