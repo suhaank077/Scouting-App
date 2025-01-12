@@ -32,43 +32,51 @@ function parseText() {
     // return the array
     return splitData;
 }
-
 function createTable() {
-    // Redo with for loops
-    // Create .env file to store API link
-    // sketchy af rn
+    const splitData = parseText();
 
     document.getElementById("myTable").innerHTML = `
-    <table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%;">
-        <tr>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Match Number</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Teleop stat 1</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Teleop stat 2</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Teleop stat 3</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto stat 1</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto stat 2</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Auto stat 3</th>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[0]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[1]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[2]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[3]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[4]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[5]+ `</td>
-            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">`+ parseText()[6]+ `</td>
-        </tr>
-    </table>
+        <table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%;">
+            <tr>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Match Number</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Team Number</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Autonomous Actions</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Teleop Actions</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Endgame Actions</th>
+                <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Overall Performance</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[0]}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[1]}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[2]} (AutoLeave), ${splitData[3]} (Coral), ${splitData[4]} (Algae)</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[5]} (Coral Scored), ${splitData[6]} (Processor Interaction)</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[7]} (Cage Attach), ${splitData[8]} (Barge Parking)</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[9]} (Overall Performance)</td>
+            </tr>
+        </table>
+    `;
 
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbyuop7CV1OKZhyZ-m1nqhgLdCMDOwluWWRIsVWVCMKKqxSE4YdOq8pYmuqC0efHHzkwPw/exec">
-        <input type="hidden" name="Match Number" value="`+ parseText()[0]+ `">
-        <input type="hidden" name="Teleop stat 1" value="`+ parseText()[1]+ `">
-        <input type="hidden" name="Teleop stat 2" value="`+ parseText()[2]+ `">
-        <input type="hidden" name="Teleop stat 3" value="`+ parseText()[3]+ `">
-        <input type="hidden" name="Auto stat 1" value="`+ parseText()[4]+ `">
-        <input type="hidden" name="Auto stat 2" value="`+ parseText()[5]+ `">
-        <input type="hidden" name="Auto stat 3" value="`+ parseText()[6]+ `">
-        <button type="submit">Send to Spreadsheet</button>
-    </form>
-  ;`
+    // Send data to Google Sheets
+    submitDataToGoogleSheets(splitData);
+}
+
+function submitDataToGoogleSheets(splitData) {
+    const formData = new FormData();
+    formData.append('Match Number', splitData[0]);
+    formData.append('Team Number', splitData[1]);
+    formData.append('Autonomous Actions', `${splitData[2]} (AutoLeave), ${splitData[3]} (Coral), ${splitData[4]} (Algae)`);
+    formData.append('Teleop Actions', `${splitData[5]} (Coral Scored), ${splitData[6]} (Processor Interaction)`);
+    formData.append('Endgame Actions', `${splitData[7]} (Cage Attach), ${splitData[8]} (Barge Parking)`);
+    formData.append('Overall Performance', splitData[9]);
+
+    // Submit the form data to the Google Sheets script
+    fetch('https://script.google.com/macros/s/AKfycbyuop7CV1OKZhyZ-m1nqhgLdCMDOwluWWRIsVWVCMKKqxSE4YdOq8pYmuqC0efHHzkwPw/exec', {
+        method: 'POST',
+        body: formData
+    }).then(response => response.json())
+    .then(data => {
+        console.log('Form submitted successfully:', data);
+    }).catch(error => {
+        console.error('Error submitting form:', error);
+    });
 }

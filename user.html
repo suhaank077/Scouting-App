@@ -7,66 +7,9 @@
 
         <title>Scout | Falcon Scout</title>
         <link rel="stylesheet" href="user.css">
-        <script src="user.js"></script>
         <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+        <script src="user.js"></script>
     </head>
-    <body>
-        <h1 class="main-titles" >Falcon Scout</h1>
-        <div class="match">
-            <h3 class = "titles">Match Number</h3>
-            <button class="input-subtraction-button" id="match" onclick="subtraction(this)"> </button>
-            <input class = "titles" id="matchinput" type="text" value="1"/>
-            <button class="input-addition-button" id="match" onclick="addition(this)"> </button>
-        </div>
-
-        <div class="team">
-            <h3 class = "titles">Team Number</h3>
-            <button class="input-subtraction-button" id="team" onclick="subtraction(this)"> </button>
-            <input class = "titles" id="teaminput" type="text" value="1"/>
-            <button class="input-addition-button" id="team" onclick="addition(this)"> </button>
-        </div>
-
-
-        <div class="speaker">
-            <h3 class = "titles">Speaker Points</h3>
-            <button class="input-subtraction-button" id="speaker" onclick="subtraction(this)"> </button>
-            <input class = "titles" id="speakerinput" type="text" value="0"/>
-            <button class="input-addition-button" id="speaker" onclick="addition(this)"> </button>
-        </div>
-
-        <div class="amp">
-            <h3 class = "titles">Amp Points</h3>
-            <button class="input-subtraction-button" id="amp" onclick="subtraction(this)"> </button>
-            <input class = "titles" id="ampinput" type="text" value="0"/>
-            <button class="input-addition-button" id="amp" onclick="addition(this)"> </button>
-        </div>
-        
-        <div class="speed">
-            <h3 class = "titles">Rate team's speed from 1-3</h3>
-            <button class="input-subtraction-button" id="speed" onclick="subtraction(this)"> </button>
-            <input class = "titles" id="speedinput" type="text" value="1"/>
-            <button class="input-addition-button" id="speed" onclick="addition(this)"> </button>
-        </div>
-
-        <div class="coopertition" id = "section1">
-            <h3 class = "titles">Did they get coopertition bonus?</h3>
-            <button class = "general-button" id = "coopertitionno" onclick = "coopertition(this.id); highlightButton('section1', this)">No</button>
-            <button class = "general-button" id = "coopertititonyes" onclick = "coopertition(this.id);  highlightButton('section1', this)">Yes</button>
-        </div>
-
-      
-        <!-- Generate QR Code -->
-
-        <button  class="input-submit-button" onclick="generateQRCode()"> </button>
-
-        
-        <div class="qrcode" id="qrcode"></div>
-        
-         
-        <div>
-            <button class = "end-button" onclick="clearForm(); unhighlightButtons()">Clear All Fields</button>
-        </div>
-        <h1></h1>
-        
+    <body onload="initializeForm()">
     </body>
 </html>

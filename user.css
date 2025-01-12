@@ -1,93 +1,158 @@
-
 body {
-	/* Set your initial background color */
-	background-color: #edf2f4;
-	display: flex;
+    background-color: #edf2f4;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-	margin: 5px;
-  }
-.input-subtraction-button {
-	width: auto;
-	height: auto;
-	min-width: 3vh;
-	min-height: 3vh;
-	background: url('subtraction (1).png');
-	background-size: 100% 100%;
-	display: inline-block;
-	vertical-align: center;
-	text-align: center;
-	border: none;
-	margin:auto;
+    justify-content: flex-start;
+    margin: 5px;
+    padding: 20px;
 }
-.input-addition-button {
-	width: auto;
-	height: auto;
-	min-width: 3vh;
-	min-height: 3vh;
-	background: url('addition.png');
-	background-size: 100% 100%;
-	display: inline-block;
-	vertical-align: center;
-	text-align: center;
-	border: none;
-	margin:auto;
 
+.section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.phase-header {
+    font-family: Arial;
+    font-size: 4vh;
+    color: #670c0f;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #670c0f;
+    padding-bottom: 10px;
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.input-group, .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.input-subtraction-button {
+    width: 3vh;
+    height: 3vh;
+    background: url('subtraction (1).png');
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.input-addition-button {
+    width: 3vh;
+    height: 3vh;
+    background: url('addition.png');
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+}
+
 .input-submit-button {
-    width: auto; 
-    height: auto; 
-    min-width: 250px; /* Set a maximum width if needed */
-    min-height: 100px;
+    width: 250px;
+    height: 100px;
     background: url('submitbutton.png');
     background-size: 100% 100%;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
     border: none;
     margin: 30px;
+    cursor: pointer;
 }
-.qrcode {
-	width: 100px;
-	height: 100px;
-	margin: auto;
-	padding-bottom: 10vh;
-	display:block;
-	background-size: 100% 100%;
-	border: none;
-	left: 50%;
-    transform: translateX(-75%);
-	margin-bottom: 100px;
+
+.general-button {
+    height: 40px;
+    min-width: 100px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.general-button:hover {
+    background-color: #f5f5f5;
+}
+
+.highlighted {
+    background-color: #670c0f;
+    color: white;
 }
 
 .titles {
-	font-family: Arial;
-	font-size: 3vh;
-	margin:.5vh;
-	font-weight: bold;
-	color:  #670c0f;
-  }
+    font-family: Arial;
+    font-size: 2.5vh;
+    margin: 0.5vh;
+    font-weight: bold;
+    color: #670c0f;
+}
 
-.main-titles{
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 6vh;
-	margin-top:20px;
-	font-weight: bold;
-	color:  #670c0f;
-}
-			
-.general-button{
-    height: 40px;
-    width : 75px;
+.main-titles {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6vh;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #670c0f;
     text-align: center;
-	font-size: 18px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	display: inine-block;
-	vertical-align: middle;
 }
-.highlighted {
-    background-color: rgb(135, 135, 135); 
-    color: black; /* Change the text color as needed */
+
+.end-button {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    border: 1px solid #670c0f;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #670c0f;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.end-button:hover {
+    background-color: #670c0f;
+    color: white;
+}
+
+.qrcode {
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+input[type="number"] {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
