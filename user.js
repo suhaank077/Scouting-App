@@ -36,13 +36,7 @@ const matchConfig = {
             options: ["Yes", "No"],
             defaultValue: "No"
         },
-        {
-            id: "cageType",
-            label: "Did the team choose a shallow or deep cage?",
-            type: "boolean",
-            options: ["Shallow", "Deep"],
-            defaultValue: "Shallow"
-        },
+        
         {
             id: "autoRankingPoint",
             label: "Did the alliance earn the auto ranking point?",
@@ -83,6 +77,13 @@ const matchConfig = {
         }
     ],
     endgame: [
+        {
+            id: "cageType",
+            label: "Did the team choose a shallow or deep cage?",
+            type: "boolean",
+            options: ["Shallow", "Deep"],
+            defaultValue: "Shallow"
+        },
         {
             id: "cageAttach",
             label: "Did the robot attach to a Cage?",
