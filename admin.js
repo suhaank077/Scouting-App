@@ -73,7 +73,7 @@ function submitDataToGoogleSheets(splitData) {
     formData.append('Overall Performance', splitData[13]);
 
     // Submit the form data to the Google Sheets script
-    fetch('https://script.google.com/macros/s/AKfycbxPiG3Tk7XS_4RwTIyJQYSonkWe3Z0xRsHg0tRokrN3uwF2vE_knZREPF6dN11dFlWH/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbz0FVnec9GcDFSMZ__njo83lXMUyjhLAw4ytoV1fO1wrSkPRsYHv6LUGvoB1UZvY-PN/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
