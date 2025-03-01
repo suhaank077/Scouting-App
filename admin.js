@@ -48,10 +48,10 @@ function createTable() {
             <tr>
                 <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[0]}</td>
                 <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[1]}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[2]} (AutoLeave), ${splitData[3]} (Coral), ${splitData[4]} (Algae)</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[5]} (Coral Scored), ${splitData[6]} (Processor Interaction)</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[7]} (Cage Attach), ${splitData[8]} (Barge Parking)</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[9]} (Overall Performance)</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[2]} (AutoLeave), ${splitData[3]} (Coral Scored), ${splitData[4]} (Algae Dislodged), ${splitData[5]} (Auto Ranking Point)</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[6]} (Coral Scored), ${splitData[7]} (Processor Interaction), ${splitData[8]} (Algae Scored in Processor), ${splitData[9]} (Coral Collection Effectiveness)</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[10]} (Which Cage), ${splitData[11]} (Cage Parking), ${splitData[12]} (Barge Parking)</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">${splitData[13]} (Overall Performance)</td>
             </tr>
         </table>
     `;
