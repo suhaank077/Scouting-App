@@ -62,8 +62,11 @@ function createTable() {
 
 function submitDataToGoogleSheets(splitData) {
     const formData = new FormData();
-    formData.append('Match Number', splitData[0]);
-    formData.append('Team Number', splitData[1]);
+
+
+    
+    formData.append('Team Number', splitData[0]);
+    formData.append('Match Number', splitData[1]);
     formData.append('Autonomous Actions', `${splitData[2]} (AutoLeave), ${splitData[3]} (Coral Scored), ${splitData[4]} (Algae Dislodged), ${splitData[5]} (Auto Ranking Point)`);
     formData.append('Teleop Actions', `${splitData[6]} (Coral Scored), ${splitData[7]} (Processor Interaction), ${splitData[8]} (Algae Scored in Processor), ${splitData[9]} (Coral Collection Effectiveness)`);
     formData.append('Endgame Actions', `${splitData[10]} (Which Cage), ${splitData[11]} (Cage Parking), ${splitData[12]} (Barge Parking)`);
