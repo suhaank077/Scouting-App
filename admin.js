@@ -70,16 +70,25 @@ function submitDataToGoogleSheets(splitData) {
     formData.append('Autonomous Actions', `${splitData[2]} (AutoLeave), ${splitData[3]} (Coral Scored), ${splitData[4]} (Algae Dislodged), ${splitData[5]} (Auto Ranking Point)`);
     formData.append('Teleop Actions', `${splitData[6]} (Coral Scored), ${splitData[7]} (Processor Interaction), ${splitData[8]} (Algae Scored in Processor), ${splitData[9]} (Coral Collection Effectiveness)`);
     formData.append('Endgame Actions', `${splitData[10]} (Which Cage), ${splitData[11]} (Cage Parking), ${splitData[12]} (Barge Parking)`);
-    formData.append('Overall Performance', $splitData[13]);
+    formData.append('Overall Performance', splitData[13]);
 
     // Submit the form data to the Google Sheets script
-    fetch('https://script.google.com/macros/s/AKfycbyuop7CV1OKZhyZ-m1nqhgLdCMDOwluWWRIsVWVCMKKqxSE4YdOq8pYmuqC0efHHzkwPw/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxPiG3Tk7XS_4RwTIyJQYSonkWe3Z0xRsHg0tRokrN3uwF2vE_knZREPF6dN11dFlWH/exec', {
         method: 'POST',
-        body: formData
-    }).then(response => response.json())
-    .then(data => {
-        console.log('Form submitted successfully:', data);
-    }).catch(error => {
-        console.error('Error submitting form:', error);
-    });
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "Team Number": splitData[0],
+            "Match Number": splitData[1],
+            "Autonomous Actions": `${splitData[2]} (AutoLeave), ${splitData[3]} (Coral Scored), ${splitData[4]} (Algae Dislodged), ${splitData[5]} (Auto Ranking Point)`,
+            "Teleop Actions": `${splitData[6]} (Coral Scored), ${splitData[7]} (Processor Interaction), ${splitData[8]} (Algae Scored in Processor), ${splitData[9]} (Coral Collection Effectiveness)`,
+            "Endgame Actions": `${splitData[10]} (Which Cage), ${splitData[11]} (Cage Parking), ${splitData[12]} (Barge Parking)`,
+            "Overall Performance": splitData[13]
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log('Form submitted successfully:', data))
+    .catch(error => console.error('Error submitting form:', error));
+    
 }
